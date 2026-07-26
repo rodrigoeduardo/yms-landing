@@ -23,10 +23,11 @@ npm run dev                  # http://localhost:3000
 
 | Variable | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_DEMO_URL` | URL of the live demo. Hero/nav/footer "Ver Demo" links open it in a new tab. |
 | `NEXT_PUBLIC_FORMSPREE_ID` | Formspree form ID — the token after `/f/` in the form endpoint. |
 
-Both are build-time public vars — set them in Vercel **before** deploying, and redeploy after changing them.
+Demo CTA links are locale-aware and not configurable via env — see `lib/i18n/config.ts` (`demoUrls`).
+
+This is a build-time public var — set it in Vercel **before** deploying, and redeploy after changing it.
 
 ## Contact form setup (Formspree)
 

@@ -1,6 +1,7 @@
 import { ContactForm } from "@/components/contact-form";
 import { LocaleToggle } from "@/components/locale-toggle";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+import { getDemoUrl } from "@/lib/i18n/config";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 function ArrowUpRight() {
@@ -34,9 +35,7 @@ function MiniLabel() {
 export default async function Home() {
   const locale = await getLocale();
   const dict = getDictionary(locale);
-  // Active locale is available here for the demo CTA — a follow-up issue
-  // will route it to a locale-specific demo domain (en / pt-br).
-  const demoUrl = process.env.NEXT_PUBLIC_DEMO_URL ?? "#";
+  const demoUrl = getDemoUrl(locale);
 
   return (
     <>
