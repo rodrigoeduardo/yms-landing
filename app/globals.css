@@ -47,6 +47,12 @@ input::placeholder, textarea::placeholder { color: var(--placeholder); }
 .nav-link { font-size: 14px; font-weight: 600; color: var(--strong-foreground); }
 .nav-link:hover { color: var(--accent); }
 
+/* Locale toggle */
+.locale-toggle { display: inline-flex; align-items: center; border: 1px solid var(--border); border-radius: 8px; padding: 2px; gap: 2px; }
+.locale-btn { border: none; background: none; cursor: pointer; font-family: var(--font-mono), monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.02em; color: var(--muted-foreground); border-radius: 6px; padding: 5px 9px; }
+.locale-btn:hover { color: var(--strong-foreground); }
+.locale-btn.active { background: var(--accent); color: #fff; }
+
 /* Buttons */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: none; border-radius: 12px; font-weight: 700; font-family: inherit; cursor: pointer; }
 .btn-primary { background: var(--accent); color: #fff; }
