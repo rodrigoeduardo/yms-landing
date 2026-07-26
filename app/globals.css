@@ -163,6 +163,35 @@ input::placeholder, textarea::placeholder { color: var(--placeholder); }
 .footer-links { margin-left: auto; display: flex; gap: 20px; }
 .footer-links a { font-size: 13px; font-weight: 600; color: oklch(0.85 0.02 245); }
 
+/* Scroll entrance animations
+   Default state (no JS, or JS/observer unavailable, or reduced motion) is
+   fully visible — the `.reveal-ready` class below is only added by
+   ScrollReveal after confirming the user does not prefer reduced motion, so
+   the hidden starting state never applies unless the reveal will actually
+   run. Only transform/opacity are animated (compositor-only, no CLS). */
+[data-reveal] { opacity: 1; transform: none; }
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.reveal-ready [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-ready .cards [data-reveal]:nth-child(2) { transition-delay: 0.1s; }
+.reveal-ready .cards [data-reveal]:nth-child(3) { transition-delay: 0.2s; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  .reveal-ready [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 @media (max-width: 960px) {
   .container { padding-left: 24px; padding-right: 24px; }
   .nav { padding: 0 24px; }
