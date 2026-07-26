@@ -1,6 +1,7 @@
 import { ContactForm } from "@/components/contact-form";
-
-const demoUrl = process.env.NEXT_PUBLIC_DEMO_URL ?? "#";
+import { LocaleToggle } from "@/components/locale-toggle";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import { getLocale } from "@/lib/i18n/get-locale";
 
 function ArrowUpRight() {
   return (
@@ -30,20 +31,27 @@ function MiniLabel() {
   );
 }
 
-export default function Home() {
+export default async function Home() {
+  const locale = await getLocale();
+  const dict = getDictionary(locale);
+  // Active locale is available here for the demo CTA — a follow-up issue
+  // will route it to a locale-specific demo domain (en / pt-br).
+  const demoUrl = process.env.NEXT_PUBLIC_DEMO_URL ?? "#";
+
   return (
     <>
       <nav className="nav">
         <a className="logo" href="#">
           <span className="logo-mark">Y</span>
-          YMS
-          <span className="logo-tag">GESTÃO DE PÁTIO</span>
+          {dict.appName}
+          <span className="logo-tag">{dict.logoTag}</span>
         </a>
         <span className="nav-links">
-          <a className="nav-link" href="#funcoes">Como funciona</a>
-          <a className="nav-link" href="#contato">Contato</a>
+          <a className="nav-link" href="#funcoes">{dict.nav.linkFuncoes}</a>
+          <a className="nav-link" href="#contato">{dict.nav.linkContato}</a>
+          <LocaleToggle locale={locale} label={dict.nav.localeLabel} />
           <a className="btn btn-primary btn-nav" href={demoUrl} target="_blank" rel="noopener noreferrer">
-            Ver Demo <ArrowUpRight />
+            {dict.nav.demoCta} <ArrowUpRight />
           </a>
         </span>
       </nav>
@@ -52,20 +60,16 @@ export default function Home() {
         <div className="hero-stripe" />
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="kicker">CONTROLE DE ESTOQUE PARA PÁTIOS · UM QR CODE POR ITEM</span>
-            <h1>Saiba exatamente o que está no seu pátio. Em tempo real.</h1>
-            <p className="hero-sub">
-              Cada carga entra com Nota Fiscal. Cada item recebe uma etiqueta QR
-              impressa na hora. Cada saída é registrada com um bipe — peso e
-              contagem sempre atualizados, sem papel, sem planilha.
-            </p>
+            <span className="kicker">{dict.hero.kicker}</span>
+            <h1>{dict.hero.title}</h1>
+            <p className="hero-sub">{dict.hero.subtitle}</p>
             <div className="hero-ctas">
               <a className="btn btn-primary btn-hero" href={demoUrl} target="_blank" rel="noopener noreferrer">
-                Ver Demo <ArrowUpRight />
+                {dict.hero.demoCta} <ArrowUpRight />
               </a>
-              <a className="btn-ghost btn" href="#contato">Falar com a gente</a>
+              <a className="btn-ghost btn" href="#contato">{dict.hero.talkCta}</a>
             </div>
-            <span className="hero-note">Demo compartilhada · dados de exemplo · sem cadastro</span>
+            <span className="hero-note">{dict.hero.note}</span>
           </div>
           <div className="label-scene" aria-hidden>
             <div className="label-backdrop" />
@@ -78,26 +82,23 @@ export default function Home() {
                 <span className="qr-dots" />
               </span>
               <span className="label-fields">
-                <span className="label-item">ITEM 042/120</span>
-                <span className="label-field">NF 12.845-3</span>
-                <span className="label-field">SUCATA MISTA</span>
-                <span className="label-field">ENTRADA 17/07/2026</span>
-                <span className="label-weight">38,5 kg</span>
+                <span className="label-item">{dict.hero.label.item}</span>
+                <span className="label-field">{dict.hero.label.invoice}</span>
+                <span className="label-field">{dict.hero.label.material}</span>
+                <span className="label-field">{dict.hero.label.intake}</span>
+                <span className="label-weight">{dict.hero.label.weight}</span>
               </span>
             </div>
-            <span className="label-caption">ETIQUETA 100×50 mm · IMPRESSA NA ENTRADA</span>
+            <span className="label-caption">{dict.hero.label.caption}</span>
           </div>
         </div>
       </header>
 
       <section id="funcoes" className="container section">
         <div className="section-head">
-          <span className="kicker">COMO FUNCIONA</span>
-          <h2>Três funções. Controle total do pátio.</h2>
-          <p>
-            Do caminhão que chega à visão completa do estoque — tudo amarrado
-            pela etiqueta QR de cada item.
-          </p>
+          <span className="kicker">{dict.funcoes.kicker}</span>
+          <h2>{dict.funcoes.title}</h2>
+          <p>{dict.funcoes.subtitle}</p>
         </div>
         <div className="cards">
           <article className="card">
@@ -110,17 +111,13 @@ export default function Home() {
               </span>
               <span className="card-num">01</span>
             </div>
-            <h3>Entrada de Carga</h3>
-            <p>
-              Registre a carga com NF, data, peso, material e quantidade de
-              itens. O sistema imprime uma etiqueta QR por item, direto na
-              impressora térmica do pátio.
-            </p>
+            <h3>{dict.funcoes.card1.title}</h3>
+            <p>{dict.funcoes.card1.body}</p>
             <div className="card-visual">
               <MiniLabel />
               <MiniLabel />
               <MiniLabel />
-              <span className="mini-count">×120</span>
+              <span className="mini-count">{dict.funcoes.card1.count}</span>
             </div>
           </article>
           <article className="card">
@@ -132,19 +129,15 @@ export default function Home() {
               </span>
               <span className="card-num">02</span>
             </div>
-            <h3>Saída com QR Code</h3>
-            <p>
-              Na retirada, escaneie a etiqueta de cada item. O sistema registra
-              data, motorista e placa do veículo — e atualiza peso restante e
-              contagem na hora.
-            </p>
+            <h3>{dict.funcoes.card2.title}</h3>
+            <p>{dict.funcoes.card2.body}</p>
             <div className="card-visual">
               <span className="scan-chip">
                 <span className="mini-qr" />
                 <span className="scan-line" />
               </span>
               <span className="scan-text">
-                ITEM 042 · BAIXADO<br />PLACA RTX-2B47 · 22/07
+                {dict.funcoes.card2.scanLine1}<br />{dict.funcoes.card2.scanLine2}
               </span>
               <svg className="scan-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                 <path d="M20 6L9 17l-5-5" />
@@ -161,52 +154,42 @@ export default function Home() {
               </span>
               <span className="card-num">03</span>
             </div>
-            <h3>Visão de Estoque</h3>
-            <p>
-              Painel somente-leitura com o estoque atual por carga, materiais no
-              pátio e o histórico completo de remoções. A verdade do pátio, em
-              uma tela.
-            </p>
+            <h3>{dict.funcoes.card3.title}</h3>
+            <p>{dict.funcoes.card3.body}</p>
             <div className="card-visual stock-rows">
-              <span className="stock-row"><span>NF 12.845 · SUCATA MISTA</span><strong>4.620 kg</strong></span>
-              <span className="stock-row"><span>NF 12.851 · COBRE</span><strong>890 kg</strong></span>
-              <span className="stock-row closed"><span>NF 12.812 · ALUMÍNIO</span><span>encerrada</span></span>
+              <span className="stock-row"><span>{dict.funcoes.card3.row1}</span><strong>{dict.funcoes.card3.row1Value}</strong></span>
+              <span className="stock-row"><span>{dict.funcoes.card3.row2}</span><strong>{dict.funcoes.card3.row2Value}</strong></span>
+              <span className="stock-row closed"><span>{dict.funcoes.card3.row3}</span><span>{dict.funcoes.card3.row3Value}</span></span>
             </div>
           </article>
         </div>
         <div className="flow">
-          <span className="flow-step">CARGA CHEGA COM NF</span>
+          <span className="flow-step">{dict.funcoes.flow.step1}</span>
           <ArrowRight />
-          <span className="flow-step">1 ETIQUETA QR POR ITEM</span>
+          <span className="flow-step">{dict.funcoes.flow.step2}</span>
           <ArrowRight />
-          <span className="flow-step">BIPE NA SAÍDA</span>
+          <span className="flow-step">{dict.funcoes.flow.step3}</span>
           <ArrowRight />
-          <span className="flow-step final">ESTOQUE ATUALIZADO</span>
-          <span className="flow-note">
-            Funciona com a impressora Elgin L42 Pro e o leitor que você já tem.
-          </span>
+          <span className="flow-step final">{dict.funcoes.flow.step4}</span>
+          <span className="flow-note">{dict.funcoes.flow.note}</span>
         </div>
       </section>
 
       <section id="contato" className="contact">
         <div className="container contact-grid">
           <div className="contact-copy">
-            <span className="kicker">CONTATO</span>
-            <h2>Fale com a gente</h2>
-            <p>
-              Conte como é a operação do seu pátio hoje — papel, planilha,
-              quantas cargas por semana. A gente mostra como o YMS se encaixa e
-              coloca você na demo.
-            </p>
+            <span className="kicker">{dict.contact.kicker}</span>
+            <h2>{dict.contact.title}</h2>
+            <p>{dict.contact.body}</p>
             <span className="contact-meta">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 6v6l4 2" />
               </svg>
-              Resposta em até 1 dia útil
+              {dict.contact.responseTime}
             </span>
           </div>
-          <ContactForm />
+          <ContactForm messages={dict.form} />
         </div>
       </section>
 
@@ -214,12 +197,12 @@ export default function Home() {
         <div className="container footer-inner">
           <span className="logo">
             <span className="logo-mark">Y</span>
-            YMS
+            {dict.appName}
           </span>
-          <span className="footer-copy">© 2026 YMS · Sistema de Gestão de Pátio</span>
+          <span className="footer-copy">{dict.footer.copy}</span>
           <span className="footer-links">
-            <a href={demoUrl} target="_blank" rel="noopener noreferrer">Demo ao vivo</a>
-            <a href="#contato">Contato</a>
+            <a href={demoUrl} target="_blank" rel="noopener noreferrer">{dict.footer.demoLink}</a>
+            <a href="#contato">{dict.footer.contactLink}</a>
           </span>
         </div>
       </footer>
