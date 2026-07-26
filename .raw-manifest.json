@@ -1,0 +1,27 @@
+{
+  "version": "0.1.0",
+  "files": {
+    ".claude/agents/auto-executor.md": "10a681aacaaded8769609386fb7b2c465fff7c1898c6becadd681b95c37e7d9d",
+    ".claude/agents/auto-reviewer.md": "d4a592c626662ed60af303cfad55734bf3363b13f21f0823c4b5a1cca5960172",
+    ".claude/settings.json": "283c5fae0207b15f0dcef50c3be379da014067fd0227976839fe352c3dbe70fd",
+    ".claude/skills/autopilot/SKILL.md": "e4e6adf61b9280e1d2cb2fe176e85e435e947a1b7d8f500c10573c2b518356d9",
+    ".claude/skills/configure/SKILL.md": "f61d61c5e0936dcb32faed33171fcbd325bcf65627ce4e1a14855954c0fc82eb",
+    ".claude/skills/create-pr/SKILL.md": "b606a9ac65053c5697373aeadc30c9edbc7e365067eba5eec6f7d0ebbe45a03b",
+    ".claude/skills/next-task/SKILL.md": "d3664e7879a6fffca263f2139a9afc591b34ad0a26edae9519f0d01c3cf11b61",
+    ".claude/skills/plan-board/SKILL.md": "427a2dad2a2f079225163124a1d8c9df98de20cbb5a4ab031fe96a518d84bc1b",
+    ".claude/skills/review-pr/SKILL.md": "293d47cbdadd62873e6824984eff3a88c2cd05b3815d40ff468721789ff27132",
+    ".github/ISSUE_TEMPLATE/task.md": "7c325ffe3c64ad6d95740dcdebcc864607a75eb986bfb6fb2c84440a3e9a16dd",
+    ".github/pull_request_template.md": "e2eac982d5e18486c9955eb902899fa1ed5c631e7af3858f7628b3342aa3465c",
+    ".github/workflows/pr-merged-cleanup.yml": "8ed69b25592a59f2e5fb31f1d5cf23fa71814d12fdcb00403a4d3b8e2fbcdfc9",
+    ".github/workflows/raw-update-check.yml": "1b033cc0d7100d11ca889b34fcdc56a113467807075138b493affb54c1ea5be3",
+    "docs/specs/business-rules.md": "8986b710c944318d134324539453303a272d78fd60cfd768dd329bf8cc68934c",
+    "docs/specs/data-model.md": "92099195c290cbdd95ed90dd4120484672ba34e3ad8d3b2c8393f62919eaf260",
+    "docs/specs/glossary.md": "3eeebad3d7969d4563785ee0a6606e514bd55c7ec048c021ca72e5c91b7c5525",
+    "docs/specs/overview.md": "54a5e2a74b5cff7ccba932655d53dc437ccdb97f8c8cbe0beea49bea14574c2e",
+    "docs/workflow/board-protocol.md": "e2be8097e4ba5524c65aeb6999dc1de1baa7d602c80186f62bd7a668c7b5d63b",
+    "docs/workflow/drafts/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/workflow/git-conventions.md": "92b3be8a4cea1606b32960956e2064f64141d05a2d3185032fb8fe0113ec2ed5",
+    "docs/workflow/review-policy.md": "35d4a8d21e5d8dec3c8ae680abc0920ff75ef1801e6c8376aa146dc3c219deeb",
+    "raw.config.yml": "ff27bd6bfc396ee2506a59e3481b4e99258ec24bc0a1d59eb2d4bb9dac72309a"
+  }
+}
