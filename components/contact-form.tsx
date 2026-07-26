@@ -36,7 +36,7 @@ export function ContactForm({ messages }: { messages: Dictionary["form"] }) {
   }
 
   return (
-    <form className="form-card" onSubmit={handleSubmit}>
+    <form className="form-card" data-reveal onSubmit={handleSubmit}>
       <div className="form-row">
         <label className="field">
           {messages.name}

@@ -1,5 +1,6 @@
 import { ContactForm } from "@/components/contact-form";
 import { LocaleToggle } from "@/components/locale-toggle";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getDemoUrl } from "@/lib/i18n/config";
 import { getLocale } from "@/lib/i18n/get-locale";
@@ -39,6 +40,7 @@ export default async function Home() {
 
   return (
     <>
+      <ScrollReveal />
       <nav className="nav">
         <a className="logo" href="#">
           <span className="logo-mark">Y</span>
@@ -58,7 +60,7 @@ export default async function Home() {
       <header className="hero">
         <div className="hero-stripe" />
         <div className="container hero-grid">
-          <div className="hero-copy">
+          <div className="hero-copy" data-reveal>
             <span className="kicker">{dict.hero.kicker}</span>
             <h1>{dict.hero.title}</h1>
             <p className="hero-sub">{dict.hero.subtitle}</p>
@@ -70,7 +72,7 @@ export default async function Home() {
             </div>
             <span className="hero-note">{dict.hero.note}</span>
           </div>
-          <div className="label-scene" aria-hidden>
+          <div className="label-scene" data-reveal aria-hidden>
             <div className="label-backdrop" />
             <div className="label-card label-back" />
             <div className="label-card label-front">
@@ -94,13 +96,13 @@ export default async function Home() {
       </header>
 
       <section id="funcoes" className="container section">
-        <div className="section-head">
+        <div className="section-head" data-reveal>
           <span className="kicker">{dict.funcoes.kicker}</span>
           <h2>{dict.funcoes.title}</h2>
           <p>{dict.funcoes.subtitle}</p>
         </div>
         <div className="cards">
-          <article className="card">
+          <article className="card" data-reveal>
             <div className="card-top">
               <span className="card-icon">
                 <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -119,7 +121,7 @@ export default async function Home() {
               <span className="mini-count">{dict.funcoes.card1.count}</span>
             </div>
           </article>
-          <article className="card">
+          <article className="card" data-reveal>
             <div className="card-top">
               <span className="card-icon">
                 <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -143,7 +145,7 @@ export default async function Home() {
               </svg>
             </div>
           </article>
-          <article className="card">
+          <article className="card" data-reveal>
             <div className="card-top">
               <span className="card-icon">
                 <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -162,7 +164,7 @@ export default async function Home() {
             </div>
           </article>
         </div>
-        <div className="flow">
+        <div className="flow" data-reveal>
           <span className="flow-step">{dict.funcoes.flow.step1}</span>
           <ArrowRight />
           <span className="flow-step">{dict.funcoes.flow.step2}</span>
@@ -176,7 +178,7 @@ export default async function Home() {
 
       <section id="contato" className="contact">
         <div className="container contact-grid">
-          <div className="contact-copy">
+          <div className="contact-copy" data-reveal>
             <span className="kicker">{dict.contact.kicker}</span>
             <h2>{dict.contact.title}</h2>
             <p>{dict.contact.body}</p>
