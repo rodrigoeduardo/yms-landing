@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   title: "YMS — Sistema de Gestão de Pátio",
   description:
     "Controle de estoque para pátios: um QR code por item, entrada com Nota Fiscal, saída com bipe e visão de estoque em tempo real.",
+  icons: {
+    icon: [
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/icons/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
