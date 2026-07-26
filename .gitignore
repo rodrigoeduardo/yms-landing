@@ -6,3 +6,6 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+
+# agent worktrees (full repo checkouts — never commit)
+.claude/worktrees/
