@@ -72,25 +72,27 @@ export default async function Home() {
             </div>
             <span className="hero-note">{dict.hero.note}</span>
           </div>
-          <div className="label-scene" data-reveal aria-hidden>
-            <div className="label-backdrop" />
-            <div className="label-card label-back" />
-            <div className="label-card label-front">
-              <span className="qr">
-                <span className="qr-finder tl" />
-                <span className="qr-finder tr" />
-                <span className="qr-finder bl" />
-                <span className="qr-dots" />
+          <div className="qr-scene" data-reveal>
+            <div className="qr-glow" aria-hidden />
+            <div className="qr-card" role="img" aria-label={dict.hero.label.qrAlt}>
+              <span className="qr-card-row">
+                <span className="qr">
+                  <span className="qr-finder tl" />
+                  <span className="qr-finder tr" />
+                  <span className="qr-finder bl" />
+                  <span className="qr-dots" />
+                  <span className="qr-scanline" />
+                </span>
+                <span className="label-fields">
+                  <span className="label-item">{dict.hero.label.item}</span>
+                  <span className="label-field">{dict.hero.label.invoice}</span>
+                  <span className="label-field">{dict.hero.label.material}</span>
+                  <span className="label-field">{dict.hero.label.intake}</span>
+                  <span className="label-weight">{dict.hero.label.weight}</span>
+                </span>
               </span>
-              <span className="label-fields">
-                <span className="label-item">{dict.hero.label.item}</span>
-                <span className="label-field">{dict.hero.label.invoice}</span>
-                <span className="label-field">{dict.hero.label.material}</span>
-                <span className="label-field">{dict.hero.label.intake}</span>
-                <span className="label-weight">{dict.hero.label.weight}</span>
-              </span>
+              <span className="qr-card-foot">{dict.hero.label.caption}</span>
             </div>
-            <span className="label-caption">{dict.hero.label.caption}</span>
           </div>
         </div>
       </header>

@@ -28,6 +28,7 @@ export type Dictionary = {
       intake: string;
       weight: string;
       caption: string;
+      qrAlt: string;
     };
   };
   funcoes: {
@@ -107,6 +108,7 @@ const ptBr: Dictionary = {
       intake: "ENTRADA 17/07/2026",
       weight: "38,5 kg",
       caption: "ETIQUETA 100×50 mm · IMPRESSA NA ENTRADA",
+      qrAlt: "Exemplo de etiqueta QR: item 042 de 120, NF 12.845-3, sucata mista, 38,5 kg",
     },
   },
   funcoes: {
@@ -202,6 +204,7 @@ const en: Dictionary = {
       intake: "INTAKE 07/17/2026",
       weight: "38.5 kg",
       caption: "100×50 mm LABEL · PRINTED ON INTAKE",
+      qrAlt: "Sample QR label: item 042 of 120, invoice 12,845-3, mixed scrap, 38.5 kg",
     },
   },
   funcoes: {
