@@ -4,6 +4,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getDemoUrl } from "@/lib/i18n/config";
 import { getLocale } from "@/lib/i18n/get-locale";
+import Image from "next/image";
 
 function ArrowUpRight() {
   return (
@@ -43,7 +44,7 @@ export default async function Home() {
       <ScrollReveal />
       <nav className="nav">
         <a className="logo" href="#">
-          <span className="logo-mark">Y</span>
+          <Image src="/icons/icon-192.png" alt="Logo" width={192} height={192} className="logo-mark" />
           {dict.appName}
           <span className="logo-tag">{dict.logoTag}</span>
         </a>
@@ -197,7 +198,7 @@ export default async function Home() {
       <footer className="footer">
         <div className="container footer-inner">
           <span className="logo">
-            <span className="logo-mark">Y</span>
+            <Image src="/icons/icon-192.png" alt="Logo" width={192} height={192} className="logo-mark" />
             {dict.appName}
           </span>
           <span className="footer-copy">{dict.footer.copy}</span>
