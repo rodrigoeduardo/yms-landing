@@ -1,7 +1,7 @@
 import { ContactForm } from "@/components/contact-form";
 import { HeroDemo } from "@/components/hero-demo";
 import { LocaleToggle } from "@/components/locale-toggle";
-import { ThermalLabel } from "@/components/thermal-label";
+import { QrMark, ThermalLabel } from "@/components/thermal-label";
 import { Walkthrough } from "@/components/walkthrough";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getDemoUrl } from "@/lib/i18n/config";
@@ -23,20 +23,28 @@ export default async function Home() {
 
   return (
     <>
-      <nav className="nav">
-        <a className="logo" href="#">
-          <Image src="/icons/icon-192.png" alt="" width={192} height={192} className="logo-mark" />
-          {dict.appName}
-        </a>
-        <span className="nav-links">
-          <a className="nav-link" href="#funcoes">{dict.nav.linkFuncoes}</a>
-          <a className="nav-link" href="#contato">{dict.nav.linkContato}</a>
-          <LocaleToggle locale={locale} label={dict.nav.localeLabel} />
-          <a className="btn btn-dark btn-nav" href={demoUrl} target="_blank" rel="noopener noreferrer">
-            {dict.nav.demoCta} <ArrowUpRight />
+      <div className="nav-bar">
+        <nav className="nav">
+          <a className="logo" href="#">
+            <Image src="/icons/icon-192.png" alt="" width={192} height={192} className="logo-mark" />
+            {dict.appName}
           </a>
-        </span>
-      </nav>
+          <span className="nav-links">
+            <a className="nav-link" href="#funcoes">{dict.nav.linkFuncoes}</a>
+            <a className="nav-link" href="#contato">{dict.nav.linkContato}</a>
+            <LocaleToggle locale={locale} label={dict.nav.localeLabel} />
+            <a className="btn btn-dark btn-nav" href={demoUrl} target="_blank" rel="noopener noreferrer">
+              <span className="nav-qr" aria-hidden>
+                <QrMark className="nav-qr-mark" />
+                <i className="nav-qr-beam" />
+              </span>
+              {dict.nav.demoCta} <ArrowUpRight />
+            </a>
+          </span>
+        </nav>
+        {/* Thermal-label tear line; the orange beam tracks scroll progress. */}
+        <span className="nav-scan" aria-hidden />
+      </div>
 
       <header className="hero">
         <div className="hero-copy">
