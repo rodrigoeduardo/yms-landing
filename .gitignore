@@ -9,3 +9,9 @@ next-env.d.ts
 
 # agent worktrees (full repo checkouts — never commit)
 .claude/worktrees/
+
+# design tooling runtime output (screenshots, decision sketches, browser logs)
+.impeccable/review/
+.impeccable/questions/
+.impeccable/mocks/
+.playwright-mcp/
