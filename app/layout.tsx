@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Spline_Sans_Mono } from "next/font/google";
+import { JetBrains_Mono, Manrope } from "next/font/google";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 import "./globals.css";
 
-const sans = Instrument_Sans({ subsets: ["latin"], variable: "--font-sans" });
-const mono = Spline_Sans_Mono({
+const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
+const mono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   variable: "--font-mono",
