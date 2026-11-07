@@ -1,5 +1,15 @@
 import type { Locale } from "./config";
 
+type LabelText = {
+  item: string;
+  invoice: string;
+  material: string;
+  intake: string;
+  weight: string;
+};
+
+type StockRow = { invoice: string; material: string; items: string; value: string };
+
 export type Dictionary = {
   meta: {
     title: string;
@@ -7,7 +17,6 @@ export type Dictionary = {
     htmlLang: string;
   };
   appName: string;
-  logoTag: string;
   nav: {
     linkFuncoes: string;
     linkContato: string;
@@ -15,41 +24,64 @@ export type Dictionary = {
     localeLabel: string;
   };
   hero: {
-    kicker: string;
     title: string;
+    titleAccent: string;
     subtitle: string;
     demoCta: string;
     talkCta: string;
     note: string;
-    label: {
-      item: string;
-      invoice: string;
-      material: string;
-      intake: string;
-      weight: string;
-      caption: string;
+  };
+  // Sample data shown in the animated app window. Every value here is
+  // demonstration data, labeled as such on the page (demo.sample).
+  demo: {
+    windowTitle: string;
+    sample: string;
+    tabsLabel: string;
+    pause: string;
+    play: string;
+    tabs: { intake: string; labels: string; checkout: string; stock: string };
+    captions: { intake: string; labels: string; checkout: string; stock: string };
+    intake: {
+      invoiceLabel: string;
+      materialLabel: string;
+      weightLabel: string;
+      itemsLabel: string;
+      dateLabel: string;
+      items: string;
+      submit: string;
     };
+    labels: { printing: string; printer: string };
+    checkout: {
+      removed: string;
+      plateLabel: string;
+      plate: string;
+      dateLabel: string;
+      date: string;
+    };
+    stock: {
+      loadCol: string;
+      itemsCol: string;
+      weightCol: string;
+      historyTitle: string;
+      historyRow: string;
+    };
+    // Numbers that tick during the stock step; formatted with meta.htmlLang.
+    numbers: { startKg: number; itemKg: number; startItems: number };
+    label: LabelText;
   };
   funcoes: {
-    kicker: string;
     title: string;
     subtitle: string;
-    card1: { title: string; body: string; count: string };
-    card2: { title: string; body: string; scanLine1: string; scanLine2: string };
-    card3: {
-      title: string;
-      body: string;
-      row1: string;
-      row1Value: string;
-      row2: string;
-      row2Value: string;
-      row3: string;
-      row3Value: string;
-    };
-    flow: { step1: string; step2: string; step3: string; step4: string; note: string };
+    step1: { title: string; body: string; count: string };
+    step2: { title: string; body: string; scanLine1: string; scanLine2: string };
+    step3: { title: string; body: string; rows: [StockRow, StockRow, StockRow]; closed: string };
+  };
+  hardware: {
+    title: string;
+    body: string;
+    flow: [string, string, string, string];
   };
   contact: {
-    kicker: string;
     title: string;
     body: string;
     responseTime: string;
@@ -85,68 +117,101 @@ const ptBr: Dictionary = {
     htmlLang: "pt-BR",
   },
   appName: "Pátio",
-  logoTag: "GESTÃO DE PÁTIO",
   nav: {
     linkFuncoes: "Como funciona",
     linkContato: "Contato",
-    demoCta: "Ver Demo",
+    demoCta: "Ver demo",
     localeLabel: "Idioma",
   },
   hero: {
-    kicker: "CONTROLE DE ESTOQUE PARA PÁTIOS · UM QR CODE POR ITEM",
-    title: "Saiba exatamente o que está no seu pátio. Em tempo real.",
+    title: "Saiba exatamente o que está no seu",
+    titleAccent: "pátio.",
     subtitle:
-      "Cada carga entra com Nota Fiscal. Cada item recebe uma etiqueta QR impressa na hora. Cada saída é registrada com um bipe — peso e contagem sempre atualizados, sem papel, sem planilha.",
-    demoCta: "Ver Demo",
+      "Cada carga entra com Nota Fiscal. Cada item recebe uma etiqueta QR impressa na hora. Cada saída é um bipe. Peso e contagem sempre certos, sem papel e sem planilha.",
+    demoCta: "Ver demo",
     talkCta: "Falar com a gente",
     note: "Demo compartilhada · dados de exemplo · sem cadastro",
+  },
+  demo: {
+    windowTitle: "Pátio · Estoque",
+    sample: "Dados de exemplo",
+    tabsLabel: "Etapas do sistema",
+    pause: "Pausar animação",
+    play: "Retomar animação",
+    tabs: { intake: "Entrada", labels: "Etiquetas", checkout: "Saída", stock: "Estoque" },
+    captions: {
+      intake: "A carga chega com a NF: material, peso e quantidade de itens.",
+      labels: "O sistema imprime uma etiqueta QR por item na térmica do pátio.",
+      checkout: "Na retirada, um bipe por item registra data, placa e motorista.",
+      stock: "O estoque desconta peso e contagem na hora. Tudo fica no histórico.",
+    },
+    intake: {
+      invoiceLabel: "Nota Fiscal",
+      materialLabel: "Material",
+      weightLabel: "Peso total",
+      itemsLabel: "Itens",
+      dateLabel: "Entrada",
+      items: "120",
+      submit: "Registrar carga",
+    },
+    labels: { printing: "Imprimindo", printer: "Elgin L42 Pro" },
+    checkout: {
+      removed: "ITEM 042 · BAIXADO",
+      plateLabel: "Placa",
+      plate: "RTX-2B47",
+      dateLabel: "Data",
+      date: "22/07/2026",
+    },
+    stock: {
+      loadCol: "Carga",
+      itemsCol: "Itens",
+      weightCol: "Restante",
+      historyTitle: "Última saída",
+      historyRow: "Item 042 · RTX-2B47 · 22/07 · −38,5\u00a0kg",
+    },
+    numbers: { startKg: 4620, itemKg: 38.5, startItems: 120 },
     label: {
       item: "ITEM 042/120",
       invoice: "NF 12.845-3",
       material: "SUCATA MISTA",
       intake: "ENTRADA 17/07/2026",
       weight: "38,5 kg",
-      caption: "ETIQUETA 100×50 mm · IMPRESSA NA ENTRADA",
     },
   },
   funcoes: {
-    kicker: "COMO FUNCIONA",
     title: "Três funções. Controle total do pátio.",
     subtitle:
-      "Do caminhão que chega à visão completa do estoque — tudo amarrado pela etiqueta QR de cada item.",
-    card1: {
-      title: "Entrada de Carga",
+      "Do caminhão que chega à visão completa do estoque, tudo amarrado pela etiqueta QR de cada item.",
+    step1: {
+      title: "Entrada de carga",
       body: "Registre a carga com NF, data, peso, material e quantidade de itens. O sistema imprime uma etiqueta QR por item, direto na impressora térmica do pátio.",
       count: "×120",
     },
-    card2: {
-      title: "Saída com QR Code",
-      body: "Na retirada, escaneie a etiqueta de cada item. O sistema registra data, motorista e placa do veículo — e atualiza peso restante e contagem na hora.",
+    step2: {
+      title: "Saída com QR code",
+      body: "Na retirada, escaneie a etiqueta de cada item. O sistema registra data, motorista e placa do veículo, e atualiza peso restante e contagem na hora.",
       scanLine1: "ITEM 042 · BAIXADO",
       scanLine2: "PLACA RTX-2B47 · 22/07",
     },
-    card3: {
-      title: "Visão de Estoque",
+    step3: {
+      title: "Visão de estoque",
       body: "Painel somente-leitura com o estoque atual por carga, materiais no pátio e o histórico completo de remoções. A verdade do pátio, em uma tela.",
-      row1: "NF 12.845 · SUCATA MISTA",
-      row1Value: "4.620 kg",
-      row2: "NF 12.851 · COBRE",
-      row2Value: "890 kg",
-      row3: "NF 12.812 · ALUMÍNIO",
-      row3Value: "encerrada",
-    },
-    flow: {
-      step1: "CARGA CHEGA COM NF",
-      step2: "1 ETIQUETA QR POR ITEM",
-      step3: "BIPE NA SAÍDA",
-      step4: "ESTOQUE ATUALIZADO",
-      note: "Funciona com a impressora Elgin L42 Pro e o leitor que você já tem.",
+      rows: [
+        { invoice: "NF 12.845", material: "Sucata mista", items: "120", value: "4.620 kg" },
+        { invoice: "NF 12.851", material: "Cobre", items: "18", value: "890 kg" },
+        { invoice: "NF 12.812", material: "Alumínio", items: "0", value: "0 kg" },
+      ],
+      closed: "encerrada",
     },
   },
+  hardware: {
+    title: "Funciona com o que você já tem.",
+    body: "A etiqueta sai da impressora Elgin L42 Pro e o bipe vem do leitor que você já usa.",
+    flow: ["Carga chega com NF", "1 etiqueta QR por item", "Bipe na saída", "Estoque atualizado"],
+  },
   contact: {
-    kicker: "CONTATO",
     title: "Fale com a gente",
-    body: "Conte como é a operação do seu pátio hoje — papel, planilha, quantas cargas por semana. A gente mostra como o Pátio se encaixa e coloca você na demo.",
+    body: "Conte como é a operação do seu pátio hoje: papel, planilha, quantas cargas por semana. A gente mostra como o Pátio se encaixa e coloca você na demo.",
     responseTime: "Resposta em até 1 dia útil",
   },
   form: {
@@ -180,68 +245,101 @@ const en: Dictionary = {
     htmlLang: "en",
   },
   appName: "YMS",
-  logoTag: "YARD MANAGEMENT",
   nav: {
     linkFuncoes: "How it works",
     linkContato: "Contact",
-    demoCta: "View Demo",
+    demoCta: "View demo",
     localeLabel: "Language",
   },
   hero: {
-    kicker: "YARD INVENTORY CONTROL · ONE QR CODE PER ITEM",
-    title: "Know exactly what's in your yard. In real time.",
+    title: "Know exactly what's in your",
+    titleAccent: "yard.",
     subtitle:
-      "Every load comes in with an invoice. Every item gets a QR label printed on the spot. Every checkout is logged with a scan — weight and count always up to date, no paper, no spreadsheets.",
-    demoCta: "View Demo",
+      "Every load comes in with an invoice. Every item gets a QR label printed on the spot. Every checkout is a scan. Weight and count always right, no paper, no spreadsheets.",
+    demoCta: "View demo",
     talkCta: "Talk to us",
     note: "Shared demo · sample data · no signup",
+  },
+  demo: {
+    windowTitle: "YMS · Inventory",
+    sample: "Sample data",
+    tabsLabel: "System steps",
+    pause: "Pause animation",
+    play: "Resume animation",
+    tabs: { intake: "Intake", labels: "Labels", checkout: "Checkout", stock: "Stock" },
+    captions: {
+      intake: "The load arrives with its invoice: material, weight, and item count.",
+      labels: "The system prints one QR label per item on the yard's thermal printer.",
+      checkout: "On pickup, one scan per item logs the date, plate, and driver.",
+      stock: "Stock deducts weight and count instantly. Everything stays in the history.",
+    },
+    intake: {
+      invoiceLabel: "Invoice",
+      materialLabel: "Material",
+      weightLabel: "Total weight",
+      itemsLabel: "Items",
+      dateLabel: "Intake",
+      items: "120",
+      submit: "Log load",
+    },
+    labels: { printing: "Printing", printer: "Elgin L42 Pro" },
+    checkout: {
+      removed: "ITEM 042 · REMOVED",
+      plateLabel: "Plate",
+      plate: "RTX-2B47",
+      dateLabel: "Date",
+      date: "07/22/2026",
+    },
+    stock: {
+      loadCol: "Load",
+      itemsCol: "Items",
+      weightCol: "Remaining",
+      historyTitle: "Last checkout",
+      historyRow: "Item 042 · RTX-2B47 · 07/22 · −38.5\u00a0kg",
+    },
+    numbers: { startKg: 4620, itemKg: 38.5, startItems: 120 },
     label: {
       item: "ITEM 042/120",
       invoice: "INV 12,845-3",
       material: "MIXED SCRAP",
       intake: "INTAKE 07/17/2026",
       weight: "38.5 kg",
-      caption: "100×50 mm LABEL · PRINTED ON INTAKE",
     },
   },
   funcoes: {
-    kicker: "HOW IT WORKS",
     title: "Three functions. Full yard control.",
     subtitle:
-      "From the truck that arrives to the complete stock view — all tied together by the QR label on every item.",
-    card1: {
-      title: "Load Intake",
+      "From the truck that arrives to the complete stock view, all tied together by the QR label on every item.",
+    step1: {
+      title: "Load intake",
       body: "Log the load with its invoice, date, weight, material, and item count. The system prints one QR label per item, straight from the yard's thermal printer.",
       count: "×120",
     },
-    card2: {
-      title: "QR Code Checkout",
-      body: "On pickup, scan each item's label. The system logs the date, driver, and vehicle plate — and updates remaining weight and count instantly.",
+    step2: {
+      title: "QR code checkout",
+      body: "On pickup, scan each item's label. The system logs the date, driver, and vehicle plate, and updates remaining weight and count instantly.",
       scanLine1: "ITEM 042 · REMOVED",
       scanLine2: "PLATE RTX-2B47 · 07/22",
     },
-    card3: {
-      title: "Inventory View",
+    step3: {
+      title: "Inventory view",
       body: "A read-only dashboard with current stock by load, materials on hand, and the full removal history. The single source of truth for your yard.",
-      row1: "INV 12,845 · MIXED SCRAP",
-      row1Value: "4,620 kg",
-      row2: "INV 12,851 · COPPER",
-      row2Value: "890 kg",
-      row3: "INV 12,812 · ALUMINUM",
-      row3Value: "closed",
-    },
-    flow: {
-      step1: "LOAD ARRIVES WITH INVOICE",
-      step2: "1 QR LABEL PER ITEM",
-      step3: "SCAN ON CHECKOUT",
-      step4: "STOCK UPDATED",
-      note: "Works with the Elgin L42 Pro printer and the scanner you already have.",
+      rows: [
+        { invoice: "INV 12,845", material: "Mixed scrap", items: "120", value: "4,620 kg" },
+        { invoice: "INV 12,851", material: "Copper", items: "18", value: "890 kg" },
+        { invoice: "INV 12,812", material: "Aluminum", items: "0", value: "0 kg" },
+      ],
+      closed: "closed",
     },
   },
+  hardware: {
+    title: "Works with what you already have.",
+    body: "Labels come out of the Elgin L42 Pro printer, and the scan comes from the reader you already use.",
+    flow: ["Load arrives with invoice", "1 QR label per item", "Scan on checkout", "Stock updated"],
+  },
   contact: {
-    kicker: "CONTACT",
     title: "Talk to us",
-    body: "Tell us how your yard runs today — paper, spreadsheets, how many loads a week. We'll show you how YMS fits in and get you into the demo.",
+    body: "Tell us how your yard runs today: paper, spreadsheets, how many loads a week. We'll show you how YMS fits in and get you into the demo.",
     responseTime: "Response within 1 business day",
   },
   form: {
