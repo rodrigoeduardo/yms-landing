@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T00:00:00Z",
+  "title": "Design System: Pátio",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#25262a",
+          "#43454a",
+          "#64666c",
+          "#87898f",
+          "#acaeb3",
+          "#cfd1d5",
+          "#edeef2"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "tonalRamp": [
+          "#090b0f",
+          "#24272c",
+          "#41454c",
+          "#616670",
+          "#848993",
+          "#aaaeb6",
+          "#cdd1d8",
+          "#ebeff4"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "tonalRamp": [
+          "#090b0f",
+          "#23272c",
+          "#41454d",
+          "#616670",
+          "#848993",
+          "#a9aeb7",
+          "#cdd1d8",
+          "#ebeff4"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#252629",
+          "#434548",
+          "#64666a",
+          "#87898d",
+          "#acaeb1",
+          "#cfd1d4",
+          "#edeef1"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Hairline, Strong",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#24272a",
+          "#42454a",
+          "#62666c",
+          "#85898f",
+          "#abaeb3",
+          "#ced1d5",
+          "#eceff2"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel Gray",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#252628",
+          "#444547",
+          "#646669",
+          "#88898c",
+          "#acaeb0",
+          "#d0d1d3",
+          "#edeef0"
+        ]
+      },
+      "panel-2": {
+        "role": "neutral",
+        "displayName": "Panel Gray, Light",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#262627",
+          "#444546",
+          "#656668",
+          "#88898b",
+          "#adaeaf",
+          "#d0d1d2",
+          "#eeeeef"
+        ]
+      },
+      "orange": {
+        "role": "primary",
+        "displayName": "Scrap Orange",
+        "tonalRamp": [
+          "#190500",
+          "#431702",
+          "#712e0c",
+          "#a44514",
+          "#dd5b0f",
+          "#fa8c5b",
+          "#fec1a7",
+          "#feeae1"
+        ]
+      },
+      "orange-display": {
+        "role": "primary",
+        "displayName": "Scrap Orange, Display",
+        "tonalRamp": [
+          "#1a0400",
+          "#451500",
+          "#732b08",
+          "#a8410e",
+          "#db5d24",
+          "#f88d62",
+          "#fdc1aa",
+          "#fdeae2"
+        ]
+      },
+      "orange-hover": {
+        "role": "primary",
+        "displayName": "Scrap Orange, Pressed",
+        "tonalRamp": [
+          "#1a0400",
+          "#431604",
+          "#752904",
+          "#aa3e05",
+          "#de5a1d",
+          "#fb8b5f",
+          "#ffc0a9",
+          "#feeae2"
+        ]
+      },
+      "orange-text": {
+        "role": "primary",
+        "displayName": "Scrap Orange, Ink",
+        "tonalRamp": [
+          "#1b0400",
+          "#441604",
+          "#762805",
+          "#ab3d07",
+          "#d0663d",
+          "#ef9371",
+          "#fbc2ae",
+          "#fee9e2"
+        ]
+      },
+      "orange-tint": {
+        "role": "primary",
+        "displayName": "Orange Tint",
+        "tonalRamp": [
+          "#0e0a08",
+          "#2b2521",
+          "#4c433d",
+          "#6f645c",
+          "#92877f",
+          "#b6aca5",
+          "#d7cfca",
+          "#f4ede9"
+        ]
+      },
+      "orange-line": {
+        "role": "primary",
+        "displayName": "Orange Rule",
+        "tonalRamp": [
+          "#160701",
+          "#372010",
+          "#5c3d28",
+          "#835c42",
+          "#a78066",
+          "#c8a690",
+          "#e7cbb8",
+          "#feeade"
+        ]
+      },
+      "dark": {
+        "role": "neutral",
+        "displayName": "Band Graphite",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#25262a",
+          "#43454a",
+          "#64666c",
+          "#87898f",
+          "#acaeb3",
+          "#cfd1d5",
+          "#edeef2"
+        ]
+      },
+      "dark-2": {
+        "role": "neutral",
+        "displayName": "Band Raised",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#24272b",
+          "#42454b",
+          "#62666e",
+          "#858991",
+          "#aaaeb5",
+          "#ced1d7",
+          "#eceff3"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Band Rule",
+        "tonalRamp": [
+          "#090b0f",
+          "#24272c",
+          "#41454c",
+          "#616670",
+          "#848993",
+          "#aaaeb6",
+          "#cdd1d8",
+          "#ebeff4"
+        ]
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "Band Text",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#262627",
+          "#444546",
+          "#656668",
+          "#88898b",
+          "#adaeaf",
+          "#d0d1d2",
+          "#eeeeef"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Band Muted",
+        "tonalRamp": [
+          "#090b0e",
+          "#24272c",
+          "#41454c",
+          "#61666f",
+          "#848992",
+          "#aaaeb6",
+          "#cdd1d7",
+          "#ebeff4"
+        ]
+      },
+      "success-bg": {
+        "role": "status",
+        "displayName": "Success Tint",
+        "tonalRamp": [
+          "#080c0a",
+          "#222825",
+          "#3f4842",
+          "#5e6963",
+          "#818c86",
+          "#a7b1ab",
+          "#cbd3cf",
+          "#eaf0ec"
+        ]
+      },
+      "success-ink": {
+        "role": "status",
+        "displayName": "Success Ink",
+        "tonalRamp": [
+          "#000f05",
+          "#012f17",
+          "#185230",
+          "#30764c",
+          "#599a6f",
+          "#87bd98",
+          "#b2debf",
+          "#d5f9df"
+        ]
+      },
+      "error-ink": {
+        "role": "status",
+        "displayName": "Error Ink",
+        "tonalRamp": [
+          "#1e0100",
+          "#4e0402",
+          "#81130b",
+          "#b42e22",
+          "#da5b4b",
+          "#f88b7a",
+          "#fdc0b6",
+          "#fee9e6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only, with one accent word in display orange."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section, hardware and contact headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Walkthrough step titles; muted inactive, graphite active."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "Paragraph under each heading; 17px on the hero at 720px and below."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base size, demo captions, form inputs."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav links, field labels, table headers, notes. Sentence case, no tracking."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "NF numbers, weights, counts, plates and dates inside the app (13 to 17px)."
+      },
+      "data-small": {
+        "displayName": "Data, Small",
+        "purpose": "Printer model, sample-data tag, step numerals, locale codes."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-lift",
+        "value": "0 30px 70px -28px rgba(22, 24, 29, 0.35), 0 3px 8px -2px rgba(22, 24, 29, 0.08)",
+        "purpose": "The app window, once per view."
+      },
+      {
+        "name": "shadow-label",
+        "value": "0 10px 22px -10px rgba(22, 24, 29, 0.35)",
+        "purpose": "Each thermal label."
+      },
+      {
+        "name": "tab-selected",
+        "value": "0 4px 10px -6px rgba(22, 24, 29, 0.3)",
+        "purpose": "Selected demo tab."
+      },
+      {
+        "name": "orange-glow",
+        "value": "0 14px 28px -14px rgba(255, 106, 19, 0.8)",
+        "purpose": "Primary button hover only."
+      },
+      {
+        "name": "focus-ring-input",
+        "value": "0 0 0 3px rgba(255, 106, 19, 0.35)",
+        "purpose": "Input focus, with graphite stroke."
+      },
+      {
+        "name": "focus-outline",
+        "value": "outline: 3px solid var(--orange); outline-offset: 3px",
+        "purpose": "Global :focus-visible."
+      },
+      {
+        "name": "scan-beam-glow",
+        "value": "0 6px 14px -2px rgba(255, 106, 19, 0.55)",
+        "purpose": "Scan beam in the checkout demo."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default easing for entrances, lifts and state changes."
+      },
+      {
+        "name": "step-duration",
+        "value": "4800ms",
+        "purpose": "Hero demo auto-cycle per step; progress bar fills linearly over it."
+      },
+      {
+        "name": "entrance-rise",
+        "value": "rise 0.9s ease-out, staggered 80ms",
+        "purpose": "Hero copy and window entrance from 18px below."
+      },
+      {
+        "name": "button-lift",
+        "value": "translateY(-2px) on hover, scale(0.98) on press, 0.35s",
+        "purpose": "All buttons."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition: none",
+        "purpose": "All animation off. Hero rests on the stock step with no pause control, one label in the feed and on the belt, scan beam hidden, counters hold end values."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack-hero",
+        "value": "1080px"
+      },
+      {
+        "name": "stack-split",
+        "value": "900px"
+      },
+      {
+        "name": "mobile",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Scrap-orange fill with graphite text; the one action per view (open the demo, send the form).",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Ver demo <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17L17 7M9 7h8v8\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: none; border-radius: 12px; font-family: var(--font-sans), system-ui, sans-serif; font-weight: 800; cursor: pointer; text-decoration: none; white-space: nowrap; height: 58px; padding: 0 26px; font-size: 17px; border-radius: 14px; transition: transform 0.35s var(--ease-out), background 0.2s, box-shadow 0.35s var(--ease-out), color 0.2s; } .ds-btn:hover { transform: translateY(-2px); } .ds-btn:active { transform: translateY(0) scale(0.98); } .ds-btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; } .ds-btn-primary { background: var(--orange); color: var(--ink); } .ds-btn-primary:hover { background: var(--orange-hover); box-shadow: 0 14px 28px -14px rgba(255, 106, 19, 0.8); }"
+    },
+    {
+      "name": "Dark Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Graphite fill, white text; the compact demo button in the nav.",
+      "html": "<a class=\"ds-btn ds-btn-dark\" href=\"#\">Ver demo <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17L17 7M9 7h8v8\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: none; border-radius: 12px; font-family: var(--font-sans), system-ui, sans-serif; font-weight: 800; cursor: pointer; text-decoration: none; white-space: nowrap; height: 58px; padding: 0 26px; font-size: 17px; border-radius: 14px; transition: transform 0.35s var(--ease-out), background 0.2s, box-shadow 0.35s var(--ease-out), color 0.2s; } .ds-btn:hover { transform: translateY(-2px); } .ds-btn:active { transform: translateY(0) scale(0.98); } .ds-btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; } .ds-btn-dark { background: var(--ink); color: #fff; height: 44px; padding: 0 18px; font-size: 15px; border-radius: 12px; } .ds-btn-dark:hover { background: #000; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary path beside the primary: 2px graphite inset ring, fills graphite on hover.",
+      "html": "<a class=\"ds-btn ds-btn-outline\" href=\"#\">Falar com a gente</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: none; border-radius: 12px; font-family: var(--font-sans), system-ui, sans-serif; font-weight: 800; cursor: pointer; text-decoration: none; white-space: nowrap; height: 58px; padding: 0 26px; font-size: 17px; border-radius: 14px; transition: transform 0.35s var(--ease-out), background 0.2s, box-shadow 0.35s var(--ease-out), color 0.2s; } .ds-btn:hover { transform: translateY(-2px); } .ds-btn:active { transform: translateY(0) scale(0.98); } .ds-btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; } .ds-btn-outline { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); } .ds-btn-outline:hover { background: var(--ink); color: #fff; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "White field with strong hairline; graphite stroke plus orange ring on focus.",
+      "html": "<label class=\"ds-field\">Nome<input placeholder=\"Seu nome\"></label>",
+      "css": ".ds-field { display: grid; gap: 8px; font: 700 14px var(--font-sans), sans-serif; color: var(--ink); width: 320px; } .ds-field input { font: 500 16px/1.4 var(--font-sans), sans-serif; color: var(--ink); background: #fff; border: 1.5px solid var(--line-strong); border-radius: 12px; padding: 14px 16px; transition: border-color 0.2s, box-shadow 0.2s; } .ds-field input::placeholder { color: #737a85; } .ds-field input:hover { border-color: #aab1bb; } .ds-field input:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(255, 106, 19, 0.35); }"
+    },
+    {
+      "name": "Locale Toggle",
+      "kind": "chip",
+      "refersTo": "locale-toggle-active",
+      "description": "Segmented PT/EN chip in the nav; active segment is graphite.",
+      "html": "<span class=\"ds-locale\" role=\"group\"><button class=\"ds-locale-btn ds-active\" aria-pressed=\"true\">PT</button><button class=\"ds-locale-btn\" aria-pressed=\"false\">EN</button></span>",
+      "css": ".ds-locale { display: inline-flex; border: 1.5px solid var(--line-strong); border-radius: 10px; padding: 2px; gap: 2px; } .ds-locale-btn { border: none; background: none; cursor: pointer; font: 700 12px/1 var(--font-mono), monospace; color: var(--muted); border-radius: 7px; padding: 7px 9px; transition: background 0.2s, color 0.2s; } .ds-locale-btn:hover { color: var(--ink); } .ds-locale-btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; } .ds-locale-btn.ds-active { background: var(--ink); color: #fff; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Sticky white bar over a hairline: logo, bold slate links with orange underline on hover, locale chip, dark demo button.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-logo\" href=\"#\"><span class=\"ds-logo-mark\"></span>Pátio</a><span class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#\">Como funciona</a><a class=\"ds-nav-link\" href=\"#\">Contato</a></span></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 28px; height: 76px; padding: 0 40px; background: var(--bg); border-bottom: 1px solid var(--line); } .ds-logo { display: flex; align-items: center; gap: 10px; font: 800 21px var(--font-sans), sans-serif; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; } .ds-logo-mark { width: 32px; height: 32px; border-radius: 9px; background: var(--panel); } .ds-nav-links { margin-left: auto; display: flex; gap: 24px; } .ds-nav-link { font: 700 15px var(--font-sans), sans-serif; color: var(--ink-2); text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 4px; } .ds-nav-link:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--orange); } .ds-nav-link:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px; }"
+    },
+    {
+      "name": "App Window",
+      "kind": "card",
+      "refersTo": "app-window",
+      "description": "Signature frame: panel-gray window with Lift shadow, step tabs (selected tab white, numeral orange) and a white stage.",
+      "html": "<div class=\"ds-window\"><div class=\"ds-tabs\"><span class=\"ds-tab\"><i>1</i>Entrada</span><span class=\"ds-tab ds-sel\"><i>2</i>Etiquetas</span><span class=\"ds-tab\"><i>3</i>Saída</span></div><div class=\"ds-stage\"><div class=\"ds-row\"><span><b>NF 12.845</b> Sucata mista</span><b>4.581,5 kg</b></div></div></div>",
+      "css": ".ds-window { width: 460px; background: var(--panel); border-radius: 26px; padding: 14px; box-shadow: var(--shadow-lift); font-family: var(--font-sans), sans-serif; color: var(--ink); } .ds-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 12px; } .ds-tab { display: flex; align-items: center; gap: 9px; border-radius: 12px; padding: 11px 12px; font: 700 14px/1 var(--font-sans), sans-serif; color: var(--muted); transition: background 0.25s, color 0.25s; } .ds-tab:hover { color: var(--ink); background: rgba(255, 255, 255, 0.55); } .ds-tab i { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #dde1e7; font: normal 700 12px/1 var(--font-mono), monospace; color: var(--ink-2); } .ds-tab.ds-sel { background: #fff; color: var(--ink); box-shadow: 0 4px 10px -6px rgba(22, 24, 29, 0.3); } .ds-tab.ds-sel i { background: var(--orange); color: var(--ink); } .ds-stage { background: #fff; border-radius: 18px; padding: 24px; } .ds-row { display: flex; justify-content: space-between; padding: 13px 14px; border-radius: 10px; font-size: 15px; background: var(--orange-tint); box-shadow: inset 0 0 0 1.5px var(--orange-line); } .ds-row b { font-family: var(--font-mono), monospace; font-weight: 700; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Thermal Label",
+      "kind": "custom",
+      "refersTo": "thermal-label",
+      "description": "Signature object: the printed 100x50 QR label (decorative QR, item n/120, NF, material, intake, weight).",
+      "html": "<div class=\"ds-label\"><svg class=\"ds-qr\" viewBox=\"0 0 7 7\" shape-rendering=\"crispEdges\" aria-hidden=\"true\"><path d=\"M0 0h7v1H0zM0 6h7v1H0zM0 1h1v5H0zM6 1h1v5H6zM2 2h3v3H2z\"/></svg><div class=\"ds-fields\"><strong>ITEM 042/120</strong><span>NF 12.845-3</span><span>SUCATA MISTA</span><span>ENTRADA 17/07/2026</span></div><span class=\"ds-weight\">38,5 kg</span></div>",
+      "css": ".ds-label { display: grid; grid-template-columns: 64px 1fr; gap: 6px 12px; width: 236px; background: #fff; border: 1px solid var(--line-strong); border-radius: 8px; padding: 12px; box-shadow: var(--shadow-label); font-family: var(--font-mono), monospace; color: var(--ink); } .ds-qr { width: 100%; fill: var(--ink); } .ds-fields { display: flex; flex-direction: column; gap: 3px; font-size: 11px; font-weight: 600; line-height: 1.2; } .ds-fields strong { font-size: 13px; font-weight: 700; } .ds-weight { grid-column: 1 / -1; border-top: 1.5px dashed var(--ink); padding-top: 6px; font-size: 18px; font-weight: 700; }"
+    },
+    {
+      "name": "Walkthrough Step",
+      "kind": "custom",
+      "description": "Numbered step: mono numeral ring that fills orange when active, title shifts muted to graphite.",
+      "html": "<div class=\"ds-step ds-active\"><span class=\"ds-num\">1</span><h3>Entrada de carga</h3></div>",
+      "css": ".ds-step { font-family: var(--font-sans), sans-serif; } .ds-num { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--line-strong); font: 700 16px/1 var(--font-mono), monospace; color: var(--muted); transition: background 0.5s var(--ease-out), border-color 0.5s, color 0.5s, transform 0.5s var(--ease-out); } .ds-step h3 { margin: 22px 0 0; font-size: 30px; font-weight: 800; letter-spacing: -0.03em; color: var(--muted); transition: color 0.4s; } .ds-step.ds-active .ds-num { background: var(--orange); border-color: var(--orange); color: var(--ink); transform: scale(1.08); } .ds-step.ds-active h3 { color: var(--ink); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Produto em Cena",
+    "overview": "The product is the hero and it is shown working. A light app window sits on a white page and runs the yard's own loop: an NF load arrives, labels print, an item is scanned out, and the stock drops. Every other surface supports that window. The page is white with graphite ink. One scrap orange carries both action and \"live\": the button you press, the step that is running, the printer light, the scan beam.\n\nDensity is calm on the page and dense inside the window. Display type is heavy, tight Manrope. Small mono type appears inside the window, where the data lives. Depth is soft and lifted: one large diffuse shadow under the app window, and a smaller one under each printed label. Elsewhere surfaces are flat and separated by tone (white, cool panel gray) instead of borders. A single graphite band breaks the white for hardware.\n\nThe thermal label (QR, item n/120, NF, material, kg) is the recurring object. It overlaps the hero window, feeds from the printer in the demo, and rides a belt in the graphite band. Motion uses an exponential ease-out from content that is already readable. Every animated surface has a complete static rest state.",
+    "keyCharacteristics": [
+      "White ground, graphite ink, one scrap orange for action and live state.",
+      "Heavy, tightly tracked Manrope display; JetBrains Mono only for yard data and machine readouts.",
+      "Large soft radii on app surfaces (26px window, 18px stage, 12px controls).",
+      "Depth by tonal panels plus one soft lifted shadow, never hard offsets.",
+      "The thermal label is the signature object, reused across hero, demo and hardware band.",
+      "Motion that starts from visible content and rests in a full static state under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Fill-Not-Ink Rule",
+        "body": "Scrap orange is a fill with graphite on top. When orange must be text on white it uses the display step and only at 40px or larger; small orange marks use the ink step.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Signal Rule",
+        "body": "Orange means \"act here\" or \"this is running now.\" It is never decoration, never a section tint, never a second accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Machine Voice Rule",
+        "body": "Mono marks what a machine prints, reads or counts: yard data, the printer readout, step numerals, locale codes, the sample-data tag. Headings, prose, buttons and field labels are never mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Kicker Rule",
+        "body": "No label sits above a heading. No text is uppercase or letter-spaced for decoration. A heading starts its own section.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lifted Object Rule",
+        "body": "Only physical-feeling objects cast shadows: the app window and the printed label. Shadows are soft and offset downward, never hard-edged.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put graphite text on every scrap-orange fill.",
+      "**Do** use display orange only for orange text at 40px or larger on white, and ink orange for small orange marks.",
+      "**Do** set NF numbers, weights, counts, plates and dates in JetBrains Mono with tabular numbers.",
+      "**Do** label every demo surface with sample data as sample data.",
+      "**Do** start animations from content that is already readable, using `cubic-bezier(0.16, 1, 0.3, 1)`.",
+      "**Do** give every animated surface a complete static state under reduced motion: the hero rests on the stock step, one label sits still in the feed and on the belt, and the scan beam is hidden.",
+      "**Do** keep the incumbent logo asset in `public/icons/` as is."
+    ],
+    "donts": [
+      "**Don't** put white text on scrap orange, or set the base orange as text on white.",
+      "**Don't** use orange as decoration, a section background or a second accent.",
+      "**Don't** set headings, prose, buttons or field labels in mono.",
+      "**Don't** add eyebrow or kicker labels above headings, or uppercase, letter-spaced labels.",
+      "**Don't** use hard offset shadows or heavy borders to separate surfaces; use panel tone.",
+      "**Don't** add a second graphite band; one per page breaks the white.",
+      "**Don't** extend the logo's blue into the palette."
+    ]
+  }
+}
