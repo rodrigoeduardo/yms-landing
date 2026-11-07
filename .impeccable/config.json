@@ -1,0 +1,62 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-assigned.html"
+        ],
+        "createdAt": "2026-11-07T00:59:58.029Z",
+        "reason": "assistant: throwaway decision-round sketch under .impeccable/mocks/decision, not shipping code"
+      },
+      {
+        "rule": "oversized-h1",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-assigned.html"
+        ],
+        "createdAt": "2026-11-07T00:59:58.047Z",
+        "reason": "assistant: throwaway decision-round sketch under .impeccable/mocks/decision, not shipping code"
+      },
+      {
+        "rule": "oversized-h1",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-model-pick.html"
+        ],
+        "createdAt": "2026-11-07T00:59:58.064Z",
+        "reason": "assistant: throwaway decision-round sketch under .impeccable/mocks/decision, not shipping code"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-assigned.html"
+        ],
+        "createdAt": "2026-11-07T01:32:37.010Z",
+        "reason": "assistant: rejected decision-round sketch under .impeccable/mocks/decision, not shipping code; fonts belong to a direction that was not chosen"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-model-pick.html"
+        ],
+        "createdAt": "2026-11-07T01:32:37.028Z",
+        "reason": "assistant: rejected decision-round sketch under .impeccable/mocks/decision, not shipping code; fonts belong to a direction that was not chosen"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/r1-challenger-bass.html"
+        ],
+        "createdAt": "2026-11-07T01:32:37.046Z",
+        "reason": "assistant: rejected decision-round sketch under .impeccable/mocks/decision, not shipping code; fonts belong to a direction that was not chosen"
+      }
+    ]
+  }
+}
